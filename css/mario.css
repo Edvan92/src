@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*****End Section Reset *****/
+
+body{
+    font-family: 'poppins';
+    
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 65px;   
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.menu li a{
+    font-weight: bold;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px 20px ;
+    border-radius: 50px;
+    transition:0.5s;
+}
+
+.menu li a:hover{
+    background-color: #d5011d;
+
+}
+/***** End Section Header *****/
+
+.principal{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    height: calc(10vh-132);
+    padding: 0 30px 0 30px;
+}
+
+.container img{
+    max-width: 500px;
+}
+
+.container p{
+    color: #a8adb7;
+    width: 85%;
+    font-size: 18px;
+}
+
+.container button{
+    background-color: #ff0021;
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s all ease-in-out;
+}
+
+.container button:hover{
+    transform: scale(1.1);
+}
+/******End Section Main*******/
+
+.video-fundo{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-fundo video{
+    height: 100vh;
+
+}
+
+.corpo::after{
+    content:"";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0.8) 50%,rgb(0, 0, 0) 100%);
+}
+/* **End Section Video** */
+
+.modal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 52, 50, 0.749);   
+    visibility: hidden;
+}
+
+.conteudo-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.fechar-modal{
+    color: #d5011d;
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.modal iframe{
+    border-width: 0;
+    width: 640;
+    height: 340;
+}
+
+.modal.aberto{
+    opacity: 0;
+}

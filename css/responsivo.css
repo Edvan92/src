@@ -1,0 +1,15 @@
+@media (max-width: 1200px){
+    body{
+        background-color: rgb(238, 175, 238);
+    }
+    .corpo{
+        display: none;
+    }
+   
+    .container{
+        flex-wrap: wrap;
+        
+    } 
+    
+
+}
